@@ -25,7 +25,7 @@ try {
   }
 };
 
-async function postData(url = 'https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits' , data = {}) {
+async function postData(url = '' , data = {}) {
   // Default options are marked with *
   const response = await fetch(url, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -42,6 +42,10 @@ async function postData(url = 'https://api.github.com/repos/PunithMohan/hellowor
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
+  postData('https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits', {})
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
