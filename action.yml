@@ -23,3 +23,7 @@ inputs:
 outputs:
   CommitsCounts: # id of output
     description: 'The time we greeted you'
+  labelname:
+    description: 'label name'
+  comments:
+    description: 'commants description'
