@@ -10,6 +10,16 @@ inputs:
     description: 'commit input'
     required: true
     default: '4'
+    
+ LabelName: # id of input
+    description: 'label name input'
+    required: true
+    default: 'LargePR'
+ Comments: # id of input
+    description: 'comment'
+    required: true
+    default: 'The PR should have less than 10 commits'
+
 outputs:
   CommitsCounts: # id of output
     description: 'The time we greeted you'
