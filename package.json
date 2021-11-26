@@ -1,5 +1,5 @@
 {
-  "name": "egghead-demo-github-action",
+  "name": "helloworld-custom-action",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/colbyfayock/egghead-demo-github-action.git"
+    "url": "git+https://github.com/PunithMohan/helloworld-custom-action.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/colbyfayock/egghead-demo-github-action/issues"
+    "url": "https://github.com/PunithMohan/helloworld-custom-action.git/issues"
   },
-  "homepage": "https://github.com/colbyfayock/egghead-demo-github-action#readme"
+  "homepage": "https://github.com/PunithMohan/helloworld-custom-action.git#readme"
 }
