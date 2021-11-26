@@ -8,6 +8,7 @@ try {
   console.log(`Commit Count ${commitCount}!`);
   var CommitsCounts = commitCount;
   core.setOutput("CommitsCounts", CommitsCounts);
+  console.log(`Commits Count ${CommitsCounts}!`)
   const labelName = core.getInput('LabelName');
   var labelname = labelName;
   core.setOutput("labelname", labelname);
