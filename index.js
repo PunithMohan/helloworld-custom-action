@@ -16,6 +16,19 @@ try {
   var comments = core.getInput('Comments');
   //core.setOutput("comments", comments);
   console.log(`comments ${comments}`);
+  
+ const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
+ console.log(`url ${url}`);
+ const options = {
+  headers: {
+    Authorization: "Bearer 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"
+  }
+};
+
+fetch(url, options)
+  .then( res => res.json() )
+  .then( data => console.log(data) );
+  
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
