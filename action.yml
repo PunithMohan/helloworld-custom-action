@@ -5,3 +5,11 @@ author: 'Colby Fayock <hello@colbyfayock.com>'
 runs:
   using: 'node12'
   main: 'index.js'
+inputs:
+  commit-count:  # id of input
+    description: 'commit input'
+    required: true
+    default: '4'
+outputs:
+  CommitsCounts: # id of output
+    description: 'The time we greeted you'
