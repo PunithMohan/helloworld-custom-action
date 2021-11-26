@@ -11,11 +11,11 @@ inputs:
     required: true
     default: '4'
     
- LabelName: # id of input
+  LabelName: # id of input
     description: 'label name input'
     required: true
     default: 'LargePR'
- Comments: # id of input
+  Comments: # id of input
     description: 'comment'
     required: true
     default: 'The PR should have less than 10 commits'
