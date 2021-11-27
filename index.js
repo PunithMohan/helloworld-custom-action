@@ -2,7 +2,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
-const Octokit = require('@octokit/core');
+const { octokit } = require('@octokit/core');
 //import fetch from 'node-fetch';
 //var token = "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"
 
@@ -26,7 +26,7 @@ try {
   console.log(`pr_number ${pr_number}`);
   
   async function postData(){
-  await Octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
+  await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
   owner: 'PunithMohan',
   repo: 'helloworld-action',
   pull_number: 1
