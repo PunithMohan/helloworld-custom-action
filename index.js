@@ -1,6 +1,7 @@
 // console.log('Hello, world!');
 const core = require('@actions/core');
 const github = require('@actions/github');
+const fetch = require('node-fetch');
 //import fetch from 'node-fetch';
 
 try {
