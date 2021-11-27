@@ -31,23 +31,10 @@ try {
   repo: 'helloworld-action',
   pull_number: 1
 })
-};
+}
 
-var  abc=postData();
+postData();
 
-  console.log('${abc}');
- const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
- console.log(`url ${url}`);
- const options = {
-  headers: {
-    Authorization: "token ${github_token}"
-  }
-};
-
-
-fetch(url, options)
-  .then( res => res.json() )
-  .then( data => console.log(data) );
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
