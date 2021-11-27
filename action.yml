@@ -19,10 +19,15 @@ inputs:
     description: 'comment'
     required: true
     default: 'The PR should have less than 10 commits'
-  GITHUB_TOKEN: #id of input
-    description: 'Default Github token'
-    required: true
-    default: 'mytoken'
+  token: #id of input
+    description: >
+      Personal access token (PAT) used to fetch the repository. The PAT is configured
+      with the local git config, which enables your scripts to run authenticated git
+      commands. The post-job step removes the PAT.
+      We recommend using a service account with the least permissions necessary.
+      Also when generating a new PAT, select the least scopes necessary.
+      [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
+    default: ${{ github.token }}
   PR_Number:
     description: 'Pull request number'
     required: true
