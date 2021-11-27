@@ -25,11 +25,17 @@ try {
   var pr_number = core.getInput('PR_Number');
   console.log(`pr_number ${pr_number}`);
   
-  await Octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
+  async function postData(){
+  await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
   owner: 'PunithMohan',
   repo: 'helloworld-action',
   pull_number: 1
 })
+};
+
+var  abc=postData();
+
+  console.log(${abc});
  const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
  console.log(`url ${url}`);
  const options = {
