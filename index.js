@@ -2,6 +2,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
+const Octokit = require('@octokit/core');
 //import fetch from 'node-fetch';
 //var token = "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"
 
@@ -23,6 +24,12 @@ try {
   console.log(`github_token ${github_token}`);
   var pr_number = core.getInput('PR_Number');
   console.log(`pr_number ${pr_number}`);
+  
+  await Octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
+  owner: 'PunithMohan',
+  repo: 'helloworld-action',
+  pull_number: 1
+})
  const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
  console.log(`url ${url}`);
  const options = {
