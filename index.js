@@ -20,8 +20,8 @@ try {
   var comments = core.getInput('Comments');
   //core.setOutput("comments", comments);
   console.log(`comments ${comments}`);
-  var github_token = core.getInput('GITHUB_TOKEN');
-  console.log(`github_token ${github_token}`);
+  var token = core.getInput('token');
+  console.log(`github_token ${token}`);
   var pr_number = core.getInput('PR_Number');
   console.log(`pr_number ${pr_number}`);
   
@@ -29,7 +29,7 @@ try {
 console.log(`url ${url}`);
 const options = {
   headers: {
-    Authorization: "token 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"
+    Authorization: "token ${token}"
   }
 };
 
