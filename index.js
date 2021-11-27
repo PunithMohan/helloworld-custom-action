@@ -26,7 +26,7 @@ try {
   console.log(`pr_number ${pr_number}`);
   
   async function postData(){
-  await octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
+  await Octokit.request('GET /repos/{owner}/{repo}/pulls/{pull_number}', {
   owner: 'PunithMohan',
   repo: 'helloworld-action',
   pull_number: 1
