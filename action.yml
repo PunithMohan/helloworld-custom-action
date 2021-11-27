@@ -22,7 +22,7 @@ inputs:
   GITHUB_TOKEN: #id of input
     description: 'Default Github token'
     required: true
-    default: null
+    default: 'mytoken'
   PR_Number:
     description: 'Pull request number'
     required: true
