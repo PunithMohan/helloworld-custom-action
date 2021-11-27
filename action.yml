@@ -22,11 +22,11 @@ inputs:
   GITHUB_TOKEN: #id of input
     description: 'Default Github token'
     required: true
-    default: ''
+    default: null
   PR_Number:
     description: 'Pull request number'
     required: true
-    default: ''
+    default: '3'
 
 outputs:
   CommitsCounts: # id of output
