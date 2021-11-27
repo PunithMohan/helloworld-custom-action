@@ -3,6 +3,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
 //import fetch from 'node-fetch';
+var token = "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"
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -23,7 +24,7 @@ try {
  console.log(`url ${url}`);
  const options = {
   headers: {
-    Authorization: "token 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"
+    Authorization: "token ${token}"
   }
 };
 
