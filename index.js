@@ -1,7 +1,7 @@
 // console.log('Hello, world!');
 const core = require('@actions/core');
 const github = require('@actions/github');
-import fetch from 'node-fetch';
+//import fetch from 'node-fetch';
 
 try {
   // `who-to-greet` input defined in action metadata file
