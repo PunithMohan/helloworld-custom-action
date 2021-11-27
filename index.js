@@ -23,7 +23,7 @@ try {
  console.log(`url ${url}`);
  const options = {
   headers: {
-    Authorization: "Bearer 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"
+    Authorization: "Bearer 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"
   }
 };
 
