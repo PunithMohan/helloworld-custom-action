@@ -35,7 +35,7 @@ try {
 
 var  abc=postData();
 
-  console.log(${abc});
+  console.log('${abc}');
  const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
  console.log(`url ${url}`);
  const options = {
