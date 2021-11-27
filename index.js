@@ -21,6 +21,8 @@ try {
   console.log(`comments ${comments}`);
   var github_token = core.getInput('GITHUB_TOKEN');
   console.log(`github_token ${github_token}`);
+  var pr_number = core.getInput('PR_Number');
+  console.log(`pr_number ${pr_number}`);
  const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
  console.log(`url ${url}`);
  const options = {
