@@ -19,6 +19,14 @@ inputs:
     description: 'comment'
     required: true
     default: 'The PR should have less than 10 commits'
+  GITHUB_TOKEN: #id of input
+    description: 'Default Github token'
+    required: true
+    default: ''
+  PR_Number:
+    description: 'Pull request number'
+    required: true
+    default: ''
 
 outputs:
   CommitsCounts: # id of output
@@ -27,3 +35,7 @@ outputs:
     description: 'label name'
   comments:
     description: 'commants description'
+  github_token:
+    description: 'github token'
+  pr_number:
+    description: ;pull request number'
