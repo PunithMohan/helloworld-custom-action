@@ -3,7 +3,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const fetch = require('node-fetch');
 //import fetch from 'node-fetch';
-var token = "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"
+//var token = "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"
 
 try {
   // `who-to-greet` input defined in action metadata file
@@ -19,12 +19,13 @@ try {
   var comments = core.getInput('Comments');
   //core.setOutput("comments", comments);
   console.log(`comments ${comments}`);
-  /*
+  var github_token = core.getInput('GITHUB_TOKEN');
+  console.log(`github_token ${github_token}`);
  const url = "https://api.github.com/repos/PunithMohan/helloworld-action/pulls/1/commits";
  console.log(`url ${url}`);
  const options = {
   headers: {
-    Authorization: "token ${token}"
+    Authorization: "token ${github_token}"
   }
 };
 
@@ -32,8 +33,6 @@ try {
 fetch(url, options)
   .then( res => res.json() )
   .then( data => console.log(data) );
-  
- */
   
   async function postData(url = '' , data = {}) {
   // Default options are marked with *
